@@ -1,0 +1,129 @@
+/* General container styling */
+.container {
+    width: 90%;
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #121212; /* Dark mode background */
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    color: #fff; /* White text */
+}
+
+/* Input and Button Container */
+.search-div {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* Input Styling */
+.input-box {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #444;
+    border-radius: 8px;
+    font-size: 16px;
+    background: #222;
+    color: #fff;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.input-box:focus {
+    outline: none;
+    border-color: #00ffcc;
+}
+
+/* Submit Button */
+.btn {
+    padding: 12px 15px;
+    background: linear-gradient(45deg, #00ffcc, #0088ff);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+.btn:hover {
+    background: linear-gradient(45deg, #0088ff, #00ffcc);
+    transform: scale(1.05);
+}
+
+/* Problem Data Section */
+.problem-data {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+/* Problem Box - Circular with Fill Effect */
+.box {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 255, 128, 0.2);
+}
+
+/* Dynamic Fill Effect (Progress Based on Percentage) */
+.box:nth-child(1) { background: conic-gradient(#00ff88 calc(var(--percent) * 1%), #333 0%); }
+.box:nth-child(2) { background: conic-gradient(#ffcc00 calc(var(--percent) * 1%), #333 0%); }
+.box:nth-child(3) { background: conic-gradient(#ff4444 calc(var(--percent) * 1%), #333 0%); }
+
+/* Total Solved Section */
+p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #00ffcc;
+    margin: 10px 0;
+}
+
+/* Details Data Section */
+.details-data {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.details-box {
+    background: linear-gradient(45deg, #333, #222);
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    flex: 1;
+    margin: 0 5px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .search-div {
+        flex-direction: column;
+    }
+
+    .input-box, .btn {
+        width: 100%;
+    }
+
+    .problem-data, .details-data {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .box, .details-box {
+        width: 100%;
+    }
+}
